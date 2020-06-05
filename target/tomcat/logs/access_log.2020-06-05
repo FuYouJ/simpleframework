@@ -1,0 +1,9 @@
+127.0.0.1 - - [05/Jun/2020:15:09:38 +0800] "GET /simpleframework/headline/toadd HTTP/1.1" 200 599 http-bio-8080-exec-1 573
+127.0.0.1 - - [05/Jun/2020:15:09:38 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-2 0
+127.0.0.1 - - [05/Jun/2020:15:09:48 +0800] "POST /simpleframework/headline/add HTTP/1.1" 200 614 http-bio-8080-exec-4 7
+127.0.0.1 - - [05/Jun/2020:15:10:17 +0800] "POST /simpleframework/headline/add HTTP/1.1" 500 1063 http-bio-8080-exec-5 7
+127.0.0.1 - - [05/Jun/2020:15:10:24 +0800] "POST /simpleframework/headline/add HTTP/1.1" 200 614 http-bio-8080-exec-6 2
+127.0.0.1 - - [05/Jun/2020:15:11:47 +0800] "GET /simpleframework/headline/query HTTP/1.1" 200 213 http-bio-8080-exec-8 34
+127.0.0.1 - - [05/Jun/2020:15:11:50 +0800] "GET /simpleframework/headline/test HTTP/1.1" 404 1101 http-bio-8080-exec-9 1
+127.0.0.1 - - [05/Jun/2020:15:12:01 +0800] "GET /simpleframework/main/test HTTP/1.1" 500 1089 http-bio-8080-exec-10 2
+127.0.0.1 - - [05/Jun/2020:15:12:09 +0800] "GET /simpleframework/headline/query HTTP/1.1" 200 213 http-bio-8080-exec-1 2
