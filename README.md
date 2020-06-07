@@ -1,6 +1,6 @@
 ## 启动方式
 
-![image-20200607192445492](..\simpleframework\README.assets\image-20200607192445492.png)
+(https://img-blog.csdnimg.cn/20200607195015823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0Z1amllMTk5Nw==,size_16,color_FFFFFF,t_70)
 
 ## 数据库配置示例
 
@@ -33,6 +33,7 @@ Map<String, TableInfo> tables = TableContext.tables;
 //批量生成
         for (TableInfo value : tables.values()) {
             System.out.println("生成:"+value.getTableName());
+            //true  使用lombok注解
             createJavaFile(value,typeConverter,true);
         }
 ```
