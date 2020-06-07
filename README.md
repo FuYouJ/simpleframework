@@ -37,3 +37,45 @@ Map<String, TableInfo> tables = TableContext.tables;
         }
 ```
 
+## 查询测试
+
+```java
+  @Test
+    void testDelete(){
+        TableContext.loadPoTables();
+        Paper_url paperUrl = new Paper_url();
+        paperUrl.setPaper_id(222);
+        new MySQLQueryImpl().deleteByPrimaryKey(paperUrl.getClass(),222);
+    }
+    @Test
+    void testAdd(){
+        TableContext.loadPoTables();
+        Paper_url paperUrl = new Paper_url();
+        paperUrl.setPaper_id(223);
+        paperUrl.setURL("safsff?????");
+        new MySQLQueryImpl().insert(paperUrl);
+    }
+    @Test
+    void testUpdate(){
+        TableContext.loadPoTables();
+        Paper_url paperUrl = new Paper_url();
+        paperUrl.setPaper_id(222);
+        paperUrl.setURL("aaa");
+        new MySQLQueryImpl().updateByPrimaryKey(paperUrl);
+    }
+    @Test
+    void testQueryRows(){
+        TableContext.loadPoTables();
+        List<Object> list = new MySQLQueryImpl().queryRows("select * from paper_url",
+                Paper_url.class, null);
+//        list.forEach(a-> System.out.println(a));
+    }
+    @Test
+    void 连表查询测试 (){
+        String  sql = "SELECT paper_url.*,paper.examId FROM\n" +
+                "paper_url,paper\n";
+        List<Object> list = new  MySQLQueryImpl().queryRows(sql, PaperDTO.class,null);
+        list.forEach(a-> System.out.println(a));
+    }
+```
+
