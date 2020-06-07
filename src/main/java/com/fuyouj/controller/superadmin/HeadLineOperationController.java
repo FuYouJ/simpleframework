@@ -7,8 +7,11 @@ import com.framework.mvc.annotation.RequestParam;
 import com.framework.mvc.annotation.ResponseBody;
 import com.framework.mvc.type.ModelAndView;
 import com.framework.mvc.type.RequestMethod;
+import com.framework.orm.core.Query;
+import com.framework.orm.core.QueryFactory;
 import com.fuyouj.entity.bo.HeadLine;
 import com.fuyouj.entity.dto.Result;
+import com.fuyouj.entity.test.Paper_url;
 import com.fuyouj.service.solo.HeadLineService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,6 +53,10 @@ public class HeadLineOperationController {
     //删除
     @RequestMapping(value = "remove",method = RequestMethod.GET)
      public void emoveHeadLine(){
+        Query query = QueryFactory.createQuery();
+        Paper_url paper_url = new Paper_url();
+        paper_url.setPaper_id(222);
+        query.delete(paper_url);
         //TODO
         System.out.println("删除headline");
     }

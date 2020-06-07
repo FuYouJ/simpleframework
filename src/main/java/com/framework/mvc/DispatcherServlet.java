@@ -9,6 +9,7 @@ import com.framework.mvc.process.impl.ControllerRequestProcessor;
 import com.framework.mvc.process.impl.JspRequestProcessor;
 import com.framework.mvc.process.impl.PreRequestProcessor;
 import com.framework.mvc.process.impl.StaticResourceRequestProcessor;
+import com.framework.orm.core.TableContext;
 import com.fuyouj.controller.frontend.MainPageController;
 import com.fuyouj.controller.superadmin.HeadLineOperationController;
 
@@ -74,5 +75,7 @@ public class DispatcherServlet extends HttpServlet {
             new AspectWeaver().doAopByAspectJ();
         }
         new DependencyInjector().doIoc();
+        //加载ORM信息
+        TableContext.loadPoTables();
     }
 }
