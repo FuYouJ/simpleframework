@@ -24,7 +24,7 @@ poolMax = 100
 #E:\mooc\手写Spring源码\simpleframework\src\main\java\com\fuyouj\entity\test
 ```
 
-## 根据数据库生成实力类 说明
+## 根据数据库生成实体类说明
 
 ```java
 Map<String, TableInfo> tables = TableContext.tables;
